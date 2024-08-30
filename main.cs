@@ -33,14 +33,12 @@ namespace CSharp
                         System.Console.WriteLine("Witaj w grze lotto, dziś do wygrania jest {0} zł", kumulacja);
                         System.Console.WriteLine("\nStan konta: {0}zł", pieniadze);
                         WyswietlKupon(kupon);
-                        // MENU
                         if (pieniadze >= 3 && losow < 8)
                         {
                             System.Console.WriteLine("1 - postaw los - 3zł [{0}/8]", losow + 1);
                         }
                         System.Console.WriteLine("2 - Sprawdź kupon - losowanie");
                         System.Console.WriteLine("3 - Zakończ grę");
-                        //KONIEC MENU
                         wybor = Console.ReadKey().Key;
                         if (wybor == ConsoleKey.D1 && pieniadze >= 3 && losow < 8)
                         {
@@ -107,7 +105,6 @@ namespace CSharp
             }
             int[] trafione = SprawdzKupon(kupon, wylosowane);
             int wartosc = 0;
-            //int wygrana = 0;
 
             System.Console.WriteLine();
             if (trafione[0] > 0)
